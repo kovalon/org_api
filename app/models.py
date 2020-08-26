@@ -5,7 +5,7 @@ from sqlalchemy.dialects.postgresql import UUID
 
 
 class Employee(db.Model):
-    id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, unique=True, nullable=False)
+    id = db.Column(db.String(36), primary_key=True, unique=True, nullable=False)
     surname = db.Column(db.String(20), index=True, nullable=False)
     name = db.Column(db.String(20), index=False, nullable=False)
     patronymic = db.Column(db.String(30), index=False, nullable=False)

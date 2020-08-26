@@ -1,3 +1,5 @@
+import uuid
+
 import sqlalchemy
 from flask_restplus import Resource
 from jsonschema import Draft7Validator
@@ -27,7 +29,8 @@ class EmployeeCollection(Resource):
     def post(self):
         """Создает нового работника в реестре Employee"""
         try:
-            employee = Employee(surname=request.json['surname'],
+            employee = Employee(id=str(uuid.uuid4()),
+                                surname=request.json['surname'],
                                 name=request.json['name'],
                                 patronymic=request.json['patronymic'],
                                 position=request.json['position'],
@@ -47,7 +50,7 @@ class EmployeeCollection(Resource):
         return {'employee': result}, 201
 
 
-@ns.route('/<uuid:id>')
+@ns.route('/<string:id>')
 @api.response(404, 'Работник не найден')
 @api.response(400, 'Введены неверные данные')
 @api.response(500, 'Ошибка сервера')
