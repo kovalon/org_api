@@ -25,6 +25,7 @@ ORM - SQLAlchemy
 
 ### Вариант 2: запуск в контейнере docker
 Перейдите в корень директории проекта и запустите следующие команды:
+    
     1. docker build . --tag restapi_app
     2. docker run -d -p 5000:5000 restapi_app
 
