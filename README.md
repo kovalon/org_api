@@ -12,10 +12,18 @@ _____
 ### Вариант 1: запуск проекта из исходников
 Перейдите в корень директории проекта и запустите следующие команды:
 #### Unix/MacOS:
-    ```pip3 install -r requirements.txt```
-    ```cp -a sources/fields.py {путь до библиотек питона}/flask_restplus/fields.py```
-    ```cp -a sources/api.py {путь до библиотек питона}/flask_restplus/api.py```
-    ```python3 app.py```
+    ```
+    pip3 install -r requirements.txt
+    ```
+    ```
+    cp -a sources/fields.py {путь до библиотек питона}/flask_restplus/fields.py
+    ```
+    ```
+    cp -a sources/api.py {путь до библиотек питона}/flask_restplus/api.py
+    ```
+    ```
+    python3 app.py
+    ```
 
 #### Windows:
     ```pip install -r requirements.txt```
