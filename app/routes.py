@@ -1,10 +1,7 @@
 import uuid
-
-import sqlalchemy
 from flask_restplus import Resource
-from jsonschema import Draft7Validator
 from app import db, api
-from flask import jsonify, json
+from flask import jsonify
 from flask_restplus import abort
 from flask import make_response
 from flask import request
