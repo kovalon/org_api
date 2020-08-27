@@ -14,14 +14,8 @@ _____
 #### Unix/MacOS:
     ```
     pip3 install -r requirements.txt
-    ```
-    ```
     cp -a sources/fields.py {путь до библиотек питона}/flask_restplus/fields.py
-    ```
-    ```
     cp -a sources/api.py {путь до библиотек питона}/flask_restplus/api.py
-    ```
-    ```
     python3 app.py
     ```
 
