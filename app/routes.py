@@ -11,6 +11,7 @@ from .serializers import employee_post, employee_put
 ns = api.namespace('organization/api/v1.0/employees', description='Операции, связанные с реестром работников')
 
 
+# Класс, описывающий методы get и post объекта Employee
 @ns.route('/')
 @api.response(400, 'Введены неверные данные')
 @api.response(500, 'Ошибка сервера')
@@ -47,6 +48,7 @@ class EmployeeCollection(Resource):
         return {'employee': result}, 201
 
 
+# Класс, описывающий методы get, put и delete объекта Employee с использование id в качестве path параметра
 @ns.route('/<string:id>')
 @api.response(404, 'Работник не найден')
 @api.response(400, 'Введены неверные данные')
